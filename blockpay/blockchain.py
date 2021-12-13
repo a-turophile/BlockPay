@@ -25,7 +25,6 @@ MINING_REWARD = 1
 MINING_DIFFICULTY = 2
 
 
-
 class Blockchain:
 
     def __init__(self):
@@ -200,16 +199,12 @@ class Blockchain:
 
         return False
 
+# Instantiate the Node
+app = Flask(__name__)
+CORS(app)
 
-
-
-
-
-
-
-
-
-
+# Instantiate the Blockchain
+blockchain = Blockchain()
 
 @app.route('/')
 def index():
@@ -332,9 +327,10 @@ if __name__ == '__main__':
 
     app.run(host='127.0.0.1', port=port)
 
-# Instantiate the Node
-app = Flask(__name__)
-CORS(app)
 
-# Instantiate the Blockchain
-blockchain = Blockchain()
+
+
+
+
+
+
