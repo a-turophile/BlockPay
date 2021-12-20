@@ -83,6 +83,8 @@ def generate_transaction():
     return jsonify(response), 200
 
 
+
+
 if __name__ == '__main__':
     from argparse import ArgumentParser
 
@@ -91,4 +93,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
     port = args.port
 
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='127.0.0.1', port=port)
+
